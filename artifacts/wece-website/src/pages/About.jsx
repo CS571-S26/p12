@@ -19,33 +19,6 @@ const values = [
   },
 ];
 
-const timeline = [
-  {
-    year: "2024",
-    title: "WECE Founded",
-    description:
-      "A group of passionate ECE students established WECE to create a supportive community for women in the field.",
-  },
-  {
-    year: "2015",
-    title: "First Industry Partnership",
-    description:
-      "Launched our corporate sponsorship program, connecting members with leading tech companies.",
-  },
-  {
-    year: "2020",
-    title: "Mentorship Program",
-    description:
-      "Established our formal mentorship program, pairing underclassmen with experienced peers and alumni.",
-  },
-  {
-    year: "2025",
-    title: "500+ Members",
-    description:
-      "Grew to become one of the largest student organizations in the College of Engineering.",
-  },
-];
-
 const faqs = [
   {
     question: "Who can join WECE?",
@@ -58,19 +31,14 @@ const faqs = [
       "While WECE primarily serves ECE students, we welcome anyone interested in electrical and computer engineering or passionate about supporting diversity in STEM fields.",
   },
   {
-    question: "How much does it cost to join?",
-    answer:
-      "WECE membership is free! We believe in making our community accessible to all students. Some special events may have optional fees for food or materials.",
-  },
-  {
     question: "How often does WECE meet?",
     answer:
-      "We host a variety of events throughout the semester, including weekly general meetings, monthly professional development workshops, and social events. Members can attend as many or as few events as their schedule allows.",
+      "We host a variety of events throughout the semester, including weekly general meetings, coffee breaks, professional development workshops, and social events. Check out our Instagram to get the latest updates!",
   },
   {
     question: "What kind of events does WECE organize?",
     answer:
-      "We organize professional development workshops, industry networking events, study sessions, social gatherings, mentorship meetups, and guest speaker panels. There's something for everyone!",
+      "We organize professional development workshops, industry networking events, study sessions, coffee breaks, and  community-building events. There's something for everyone!",
   },
 ];
 
@@ -91,18 +59,18 @@ export default function About() {
       {/* Mission */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 md:grid-cols-1 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">Our Mission</h2>
-              <p className="text-lg text-gray-700 mb-4 leading-relaxed">
+              <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-gray-900">Our Mission</h2>
+              <p className="text-lg text-gray-700 mb-4 text-center leading-relaxed">
                 WECE is dedicated to empowering women and underrepresented genders in Electrical and
                 Computer Engineering at the University of Wisconsin-Madison.
               </p>
-              <p className="text-lg text-gray-700 mb-4 leading-relaxed">
+              <p className="text-lg text-gray-700 mb-4 text-center leading-relaxed">
                 We provide a supportive community, professional development opportunities, and
                 connections to help our members thrive in academia and industry.
               </p>
-              <p className="text-lg text-gray-700 leading-relaxed">
+              <p className="text-lg text-gray-700 text-center leading-relaxed">
                 Through mentorship, networking, and advocacy, we work to create a more inclusive
                 future for engineering.
               </p>
@@ -117,7 +85,7 @@ export default function About() {
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-gray-900">
             Our Values
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {values.map(({ icon: Icon, title, description }) => (
               <div
                 key={title}
@@ -128,33 +96,6 @@ export default function About() {
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
                 <p className="text-gray-600 text-sm">{description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Timeline */}
-      <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-gray-900">
-            Our Journey
-          </h2>
-          <div className="space-y-8">
-            {timeline.map((item, index) => (
-              <div key={item.year} className="flex gap-6">
-                <div className="flex flex-col items-center">
-                  <div className="w-16 h-16 bg-[#c5050c] text-white rounded-full flex items-center justify-center font-bold text-sm shrink-0">
-                    {item.year}
-                  </div>
-                  {index !== timeline.length - 1 && (
-                    <div className="w-1 flex-1 bg-[#ffc5d0] mt-2" />
-                  )}
-                </div>
-                <div className="flex-1 pb-8">
-                  <h3 className="text-xl font-semibold mb-2 text-gray-900">{item.title}</h3>
-                  <p className="text-gray-600">{item.description}</p>
-                </div>
               </div>
             ))}
           </div>

@@ -68,19 +68,14 @@ export function About() {
         "While WECE primarily serves ECE students, we welcome anyone interested in electrical and computer engineering or passionate about supporting diversity in STEM fields.",
     },
     {
-      question: "How much does it cost to join?",
-      answer:
-        "WECE membership is free! We believe in making our community accessible to all students. Some special events may have optional fees for food or materials.",
-    },
-    {
       question: "How often does WECE meet?",
       answer:
-        "We host a variety of events throughout the semester, including weekly general meetings, monthly professional development workshops, and social events. Members can attend as many or as few events as their schedule allows.",
+        "We host a variety of events throughout the semester, including weekly general meetings, coffee breaks, professional development workshops, and social events. Check out our Instagram to get the latest updates!",
     },
     {
       question: "What kind of events does WECE organize?",
       answer:
-        "We organize professional development workshops, industry networking events, study sessions, social gatherings, mentorship meetups, and guest speaker panels. There's something for everyone!",
+        "We organize professional development workshops, industry networking events, study sessions, coffee breaks, and  community-building events. There's something for everyone!",
     },
   ];
 
@@ -274,33 +269,6 @@ export function About() {
                 </li>
               </ul>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Timeline Section */}
-      <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-gray-900">
-            Our Journey
-          </h2>
-          <div className="space-y-8">
-            {timeline.map((item, index) => (
-              <div key={item.year} className="flex gap-6">
-                <div className="flex flex-col items-center">
-                  <div className="w-16 h-16 bg-[#c5050c] text-white rounded-full flex items-center justify-center font-bold">
-                    {item.year}
-                  </div>
-                  {index !== timeline.length - 1 && (
-                    <div className="w-1 flex-1 bg-[#ffc5d0] mt-2"></div>
-                  )}
-                </div>
-                <div className="flex-1 pb-8">
-                  <h3 className="text-xl font-semibold mb-2 text-gray-900">{item.title}</h3>
-                  <p className="text-gray-600">{item.description}</p>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
