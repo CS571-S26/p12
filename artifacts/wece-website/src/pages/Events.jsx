@@ -4,11 +4,11 @@ import { InstagramEmbed } from "react-social-media-embed";
 const INSTAGRAM_URL = "https://www.instagram.com/weceuwmadison/";
 
 const instagramPosts = [
-  "https://www.instagram.com/p/DXQDE_ekUs6/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA%3D%3D",
+  "https://www.instagram.com/p/DXQDE_ekUs6/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ==",
   "https://www.instagram.com/p/DXM137Limcz/",
-  "https://www.instagram.com/p/DW4lkxnke5u/",
-  "https://www.instagram.com/p/DWzkhnBEe0R/",
-  "https://www.instagram.com/p/DWR_UY5kdh3/",
+  "https://www.instagram.com/p/DW4lkxnke5u/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ==",
+  "https://www.instagram.com/p/DWzkhnBEe0R/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ==",
+  "https://www.instagram.com/p/DWR_UY5kdh3/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ==",
   "https://www.instagram.com/p/DWPE5PjDimw/",
 ];
 
@@ -40,6 +40,11 @@ export default function Events() {
                 <InstagramEmbed url={url} width={328} />
               </div>
             ))}
+          </div>
+          <div className="grid grid-cols-1 gap-8 justify-items-center">
+            {/* Calendar */}
+          <iframe src="https://calendar.google.com/calendar/embed?src=wece.uwmadison%40gmail.com&ctz=America%2FChicago"
+            style={{ border: 0 }} width="800" height="600" frameBorder="0" scrolling="no"></iframe>
           </div>
         </div>
       </section>
