@@ -49,7 +49,7 @@ export default function About() {
       <section className="relative py-20 bg-gradient-to-br from-[#c5050c] to-[#a00409] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">About WECE</h1>
-          <p className="text-xl max-w-3xl text-white/90">
+          <p className="text-xl max-w-3xl text-white">
             Building a stronger, more diverse community in electrical and computer engineering at
             UW-Madison.
           </p>
@@ -89,7 +89,7 @@ export default function About() {
                 className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow text-center"
               >
                 <div className="w-14 h-14 bg-[#ffc5d0] rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <Icon className="text-[#c5050c]" size={28} />
+                  <Icon aria-hidden="true" focusable="false" className="text-[#8b0000]" size={28} />
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
                 <p className="text-gray-600 text-sm">{description}</p>

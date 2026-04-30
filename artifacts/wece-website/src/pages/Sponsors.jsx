@@ -60,17 +60,16 @@ const externalVP = {
 export default function Sponsors() {
   return (
     <div className="flex flex-col">
-      {/* Hero */}
       <section className="relative py-20 bg-gradient-to-br from-[#c5050c] via-[#a00409] to-[#c5050c] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Industry</h1>
-          <p className="text-xl max-w-3xl text-white/90 mb-6 leading-relaxed">
-            At WECE UW-Madison, we're building a community that supports, uplifts, and celebrates women in electrical 
-            and computer engineering. We're excited to grow relationships with companies and organizations that share 
+          <p className="text-xl max-w-3xl text-white mb-6 leading-relaxed">
+            At WECE UW-Madison, we're building a community that supports, uplifts, and celebrates women in electrical
+            and computer engineering. We're excited to grow relationships with companies and organizations that share
             our mission.
           </p>
-          <p className="text-xl max-w-3xl text-white/90 mb-6 leading-relaxed">
-            Whether you're looking to connect with passionate students, support diversity in STEM, or get involved in 
+          <p className="text-xl max-w-3xl text-white mb-6 leading-relaxed">
+            Whether you're looking to connect with passionate students, support diversity in STEM, or get involved in
             outreach and events, we'd love to hear from you.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 mt-8">
@@ -96,7 +95,6 @@ export default function Sponsors() {
         </div>
       </section>
 
-      {/* Why Partner */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-gray-900">
@@ -106,7 +104,7 @@ export default function Sponsors() {
             {partnershipBenefits.map(({ icon: Icon, title, description }) => (
               <div key={title} className="bg-gray-50 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow flex gap-5">
                 <div className="w-14 h-14 bg-[#ffc5d0] rounded-xl flex items-center justify-center shrink-0">
-                  <Icon className="text-[#c5050c]" size={28} />
+                  <Icon className="text-[#8b0000]" size={28} />
                 </div>
                 <div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">{title}</h3>
@@ -118,7 +116,6 @@ export default function Sponsors() {
         </div>
       </section>
 
-      {/* Current Sponsors */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-gray-900">
@@ -135,10 +132,14 @@ export default function Sponsors() {
               >
                 <div className="w-24 h-24 flex items-center justify-center mx-auto mb-4">
                   {sponsor.logo ? (
-                    <img src={sponsor.logo} alt={sponsor.name} className="w-full h-full object-contain" />
+                    <img
+                      src={sponsor.logo}
+                      alt={`${sponsor.name} logo`}
+                      className="w-full h-full object-contain"
+                    />
                   ) : (
                     <div className="w-full h-full bg-[#ffc5d0] rounded-full flex items-center justify-center">
-                      <Building2 className="text-[#c5050c]" size={28} />
+                      <Building2 className="text-[#8b0000]" size={28} />
                     </div>
                   )}
                 </div>
@@ -155,11 +156,10 @@ export default function Sponsors() {
         </div>
       </section>
 
-      {/* Sponsorship Packet CTA */}
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-[#ffc5d0]/20 border border-[#ffc5d0] rounded-2xl p-10 text-center">
-            <FileText className="text-[#c5050c] mx-auto mb-4" size={48} />
+            <FileText className="text-[#8b0000] mx-auto mb-4" size={48} />
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Download Our Sponsorship Packet</h2>
             <p className="text-gray-600 mb-6 max-w-xl mx-auto">
               Learn about our sponsorship tiers, benefits, and how your company can make a lasting
@@ -169,7 +169,7 @@ export default function Sponsors() {
               href="/WECE-Sponsorship-Packet.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center px-8 py-3 bg-[#c5050c] text-white rounded-lg hover:bg-[#a00409] transition-colors font-semibold shadow-md"
+              className="inline-flex items-center justify-center px-8 py-3 bg-[#8b0000] text-white rounded-lg hover:bg-[#a00409] transition-colors font-semibold shadow-md"
             >
               <FileText className="mr-2" size={20} />
               Sponsorship Packet
@@ -178,7 +178,6 @@ export default function Sponsors() {
         </div>
       </section>
 
-      {/* Contact VP */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-xl shadow-sm p-8 text-center">
@@ -188,11 +187,11 @@ export default function Sponsors() {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <div className="text-gray-700">
-                <span className="font-semibold">{externalVP.name}</span> — {externalVP.role}
+                <span className="font-semibold">{externalVP.name}</span> - {externalVP.role}
               </div>
               <a
                 href={`mailto:${externalVP.email}@wisc.edu`}
-                className="inline-flex items-center px-6 py-2 bg-[#ffc5d0]/30 text-[#c5050c] rounded-lg hover:bg-[#ffc5d0]/50 transition-colors font-semibold"
+                className="inline-flex items-center px-6 py-2 bg-[#ffc5d0]/30 text-[#8b0000] rounded-lg hover:bg-[#ffc5d0]/50 transition-colors font-semibold"
               >
                 <Mail size={16} className="mr-2" />
                 {externalVP.email}@wisc.edu
@@ -211,11 +210,10 @@ export default function Sponsors() {
         </div>
       </section>
 
-      {/* Bottom CTA */}
       <section className="py-16 bg-gradient-to-br from-[#c5050c] via-[#a00409] to-[#c5050c] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Partner with WECE?</h2>
-          <p className="text-xl mb-8 text-white/90 leading-relaxed">
+          <p className="text-xl mb-8 text-white leading-relaxed">
             Join us in supporting diversity and inclusion in electrical and computer engineering.
             We'd love to explore sponsorship and partnership opportunities with your organization.
           </p>

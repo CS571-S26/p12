@@ -48,11 +48,11 @@ const upcomingEvents = [
 ];
 
 const categoryColors = {
-  Professional: "bg-blue-100 text-blue-700",
-  Academic: "bg-green-100 text-green-700",
-  Mentorship: "bg-purple-100 text-purple-700",
-  Social: "bg-orange-100 text-orange-700",
-  Industry: "bg-[#ffc5d0] text-[#c5050c]",
+  Professional: "bg-blue-100 text-blue-800",
+  Academic: "bg-green-100 text-green-800",
+  Mentorship: "bg-violet-100 text-violet-800",
+  Social: "bg-orange-100 text-orange-800",
+  Industry: "bg-[#ffc5d0] text-[#7a0007]",
 };
 
 const sponsors = [
@@ -68,19 +68,19 @@ const sponsors = [
 const instagramPosts = [
   {
     src: "https://images.unsplash.com/photo-1573165706511-3ffde6ef1fe3?w=400&q=80",
-    alt: "Engineering team working",
+    alt: "Students collaborating around a table",
   },
   {
     src: "https://images.unsplash.com/photo-1762158007836-25d13ab34c1c?w=400&q=80",
-    alt: "Students networking",
+    alt: "Students talking during a networking event",
   },
   {
     src: "https://images.unsplash.com/photo-1643732774973-ff2d0e610d7a?w=400&q=80",
-    alt: "Electronics circuit board",
+    alt: "Close-up of an electronics circuit board",
   },
   {
     src: "https://images.unsplash.com/photo-1573496130141-209d200cebd8?w=400&q=80",
-    alt: "Mentorship session",
+    alt: "Two people talking during a mentorship session",
   },
 ];
 
@@ -95,7 +95,7 @@ export default function Home() {
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
               Women in Electrical &amp; Computer Engineering
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-white/90">
+            <p className="text-xl md:text-2xl mb-8 text-white">
               Building a supportive community for women and underrepresented genders in ECE at UW-Madison
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -104,7 +104,7 @@ export default function Home() {
                 className="inline-flex items-center justify-center px-8 py-3 bg-white text-[#c5050c] rounded-lg hover:bg-gray-100 transition-colors font-semibold"
               >
                 Get Involved
-                <ArrowRight className="ml-2" size={20} />
+                <ArrowRight aria-hidden="true" focusable="false" className="ml-2" size={20} />
               </Link>
               <Link
                 to="/events"
@@ -133,7 +133,7 @@ export default function Home() {
                 className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow text-center"
               >
                 <div className="w-14 h-14 bg-[#ffc5d0] rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <Icon className="text-[#c5050c]" size={28} />
+                  <Icon aria-hidden="true" focusable="false" className="text-[#8b0000]" size={28} />
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">{title}</h3>
                 <p className="text-gray-600 text-sm">{description}</p>
@@ -152,7 +152,7 @@ export default function Home() {
               to="/events"
               className="text-[#c5050c] hover:text-[#a00409] font-semibold inline-flex items-center text-sm"
             >
-              View All <ArrowRight className="ml-1" size={16} />
+              View All <ArrowRight aria-hidden="true" focusable="false" className="ml-1" size={16} />
             </Link>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -196,7 +196,7 @@ export default function Home() {
               to="/sponsors"
               className="text-[#c5050c] hover:text-[#a00409] font-semibold inline-flex items-center"
             >
-              View All Sponsors <ArrowRight className="ml-1" size={16} />
+              View All Sponsors <ArrowRight aria-hidden="true" focusable="false" className="ml-1" size={16} />
             </Link>
           </div>
         </div>
@@ -206,7 +206,7 @@ export default function Home() {
       <section className="py-16 bg-[#c5050c] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Get Involved?</h2>
-          <p className="text-xl mb-8 text-white/90">
+          <p className="text-xl mb-8 text-white">
             Join our community and start your journey with WECE today.
           </p>
           <Link
@@ -214,7 +214,7 @@ export default function Home() {
             className="inline-flex items-center px-8 py-3 bg-white text-[#c5050c] rounded-lg hover:bg-gray-100 transition-colors font-semibold"
           >
             Join WECE
-            <ArrowRight className="ml-2" size={20} />
+            <ArrowRight aria-hidden="true" focusable="false" className="ml-2" size={20} />
           </Link>
         </div>
       </section>

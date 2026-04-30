@@ -19,7 +19,7 @@ export default function Events() {
       <section className="relative py-20 bg-gradient-to-br from-[#c5050c] to-[#a00409] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Events</h1>
-          <p className="text-xl max-w-3xl text-white/90">
+          <p className="text-xl max-w-3xl text-white">
             Join us for professional development workshops, social events, and more throughout the semester.
           </p>
         </div>
@@ -36,15 +36,34 @@ export default function Events() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
             {instagramPosts.map((url) => (
-              <div key={url} className="w-full flex justify-center">
-                <InstagramEmbed url={url} width={328} />
+              <div className="w-full flex justify-center">
+              <div role="region" aria-label="Instagram post from WECE">
+                
+                <a
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block focus:outline-none focus:ring-2 focus:ring-[#c5050c]"
+                  aria-label="View this WECE Instagram post (opens in a new tab)"
+                >
+                  <InstagramEmbed url={url} width={328} />
+                </a>
+
               </div>
+            </div>
             ))}
           </div>
-          <div className="grid grid-cols-1 gap-8 justify-items-center">
+          <div className="mt-10 grid grid-cols-1 gap-8 justify-items-center">
             {/* Calendar */}
-          <iframe src="https://calendar.google.com/calendar/embed?src=wece.uwmadison%40gmail.com&ctz=America%2FChicago"
-            style={{ border: 0 }} width="800" height="600" frameBorder="0" scrolling="no"></iframe>
+            <iframe
+              src="https://calendar.google.com/calendar/embed?src=wece.uwmadison%40gmail.com&ctz=America%2FChicago"
+              title="WECE Google Calendar"
+              style={{ border: 0 }}
+              width="100%"
+              height="600"
+              frameBorder="0"
+              scrolling="no"
+            ></iframe>
           </div>
         </div>
       </section>

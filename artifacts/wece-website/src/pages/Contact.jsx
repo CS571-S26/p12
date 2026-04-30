@@ -1,4 +1,4 @@
-import { Mail, Instagram, Linkedin, MessageSquare, Briefcase, Users } from "lucide-react";
+import { Mail, Instagram, Linkedin, MessageSquare, Briefcase, Users, CheckCircle } from "lucide-react";
 import { useState } from "react";
 
 const CONTACT_EMAIL = "wece.uwmadison";
@@ -62,25 +62,33 @@ export default function Contact() {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
-    setFormData({ name: "", email: "", reason: "", message: "" });
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
+    if (res.ok) {
+      setSubmitted(true);
+      setFormData({ name: "", email: "", reason: "", message: "" });
+    } else {
+      const { error } = await res.json();
+      alert(`Submission failed: ${error}`);
+    }
   };
 
   return (
     <div className="flex flex-col">
-      {/* Hero */}
       <section className="relative py-20 bg-gradient-to-br from-[#c5050c] to-[#a00409] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
-          <p className="text-xl max-w-3xl text-white/90">
+          <p className="text-xl max-w-3xl text-white">
             Have questions? We'd love to hear from you! Get in touch with the WECE team below.
           </p>
         </div>
       </section>
 
-      {/* Contact Cards */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-gray-900">
@@ -93,22 +101,21 @@ export default function Contact() {
                 className="bg-gray-50 rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow"
               >
                 <div className="w-16 h-16 bg-[#ffc5d0] rounded-lg flex items-center justify-center mx-auto mb-6">
-                  <card.icon className="text-[#c5050c]" size={32} />
+                  <card.icon className="text-[#8b0000]" size={32} />
                 </div>
                 <h3 className="text-xl font-semibold mb-3 text-gray-900">{card.title}</h3>
                 <p className="text-gray-600 mb-4">{card.description}</p>
                 <a
-                  href={`mailto:${card.email}@gmail.com`}
+                  href={`mailto:${card.email}`}
                   className="text-[#c5050c] hover:text-[#a00409] font-semibold inline-flex items-center"
                 >
-                  <Mail size={18} className="mr-2" />
-                  {card.email}@gmail.com
+                  <Mail aria-hidden="true" focusable="false" size={18} />
+                  {card.email}
                 </a>
               </div>
             ))}
           </div>
 
-          {/* Social Links */}
           <div className="text-center mb-16">
             <h3 className="text-xl font-semibold text-gray-900 mb-6">Follow Us</h3>
             <div className="flex justify-center gap-6">
@@ -118,7 +125,7 @@ export default function Contact() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-6 py-3 bg-[#ffc5d0]/30 text-[#c5050c] rounded-lg hover:bg-[#ffc5d0]/60 transition-colors font-semibold"
               >
-                <Instagram size={20} />
+                <Instagram aria-hidden="true" focusable="false" size={20} />
                 Instagram
               </a>
               <a
@@ -127,23 +134,27 @@ export default function Contact() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 px-6 py-3 bg-blue-50 text-blue-700 rounded-lg hover:bg-blue-100 transition-colors font-semibold"
               >
-                <Linkedin size={20} />
+                <Linkedin aria-hidden="true" focusable="false" size={20} />
                 LinkedIn
               </a>
             </div>
           </div>
 
-          {/* Contact Form */}
           <div className="max-w-2xl mx-auto">
             <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Send a Message</h3>
             {submitted ? (
-              <div className="bg-green-50 border border-green-200 rounded-xl p-8 text-center">
-                <div className="text-green-600 text-5xl mb-4">✓</div>
+              <div
+                className="bg-green-50 border border-green-200 rounded-xl p-8 text-center"
+                role="status"
+                aria-live="polite"
+              >
+                <CheckCircle aria-hidden="true" className="text-green-700 mx-auto mb-4" size={48} />
                 <h4 className="text-xl font-semibold text-green-800 mb-2">Message Sent!</h4>
                 <p className="text-green-700">
                   Thank you for reaching out. We'll get back to you within 2-3 business days.
                 </p>
                 <button
+                  type="button"
                   onClick={() => setSubmitted(false)}
                   className="mt-4 text-[#c5050c] hover:underline font-medium"
                 >
@@ -230,7 +241,6 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* FAQ */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-gray-900">

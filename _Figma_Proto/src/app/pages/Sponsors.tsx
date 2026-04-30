@@ -72,14 +72,14 @@ export function Sponsors() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-6 py-3 bg-white text-[#c5050c] rounded-lg hover:bg-gray-100 transition-colors font-semibold shadow-lg hover:shadow-xl"
             >
-              <FileText className="mr-2" size={20} />
+              <FileText aria-hidden="true" className="mr-2" size={20} />
               Company Database Form
             </a>
             <a
               href="#"
               className="inline-flex items-center justify-center px-6 py-3 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white/10 transition-colors font-semibold"
             >
-              <FileText className="mr-2" size={20} />
+              <FileText aria-hidden="true" className="mr-2" size={20} />
               Sponsorship Packet
             </a>
           </div>
@@ -99,7 +99,7 @@ export function Sponsors() {
                 className="bg-gradient-to-br from-white to-gray-50 rounded-xl p-8 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-[#ffc5d0] to-[#ffb3c1] rounded-lg flex items-center justify-center mb-6 shadow-md">
-                  <benefit.icon className="text-[#c5050c]" size={32} />
+                  <benefit.icon aria-hidden="true" className="text-[#8b0000]" size={32} />
                 </div>
                 <h3 className="text-2xl font-semibold mb-4 text-gray-900">{benefit.title}</h3>
                 <p className="text-gray-700 leading-relaxed">{benefit.description}</p>
@@ -124,7 +124,7 @@ export function Sponsors() {
                 <div className="flex-1 flex flex-col items-center justify-center mb-6 w-full">
                   <div className="w-full h-32 bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg flex items-center justify-center mb-6 border border-gray-200">
                     <div className="text-gray-400 text-center px-4">
-                      <Building2 size={48} className="mx-auto mb-2" />
+                      <Building2 aria-hidden="true" size={48} className="mx-auto mb-2" />
                       <span className="text-sm">Logo</span>
                     </div>
                   </div>
@@ -140,7 +140,7 @@ export function Sponsors() {
                   className="w-full px-6 py-3 bg-[#c5050c] text-white rounded-lg hover:bg-[#a00409] transition-colors font-semibold inline-flex items-center justify-center shadow-md hover:shadow-lg"
                 >
                   Visit Website
-                  <ExternalLink className="ml-2" size={18} />
+                  <ExternalLink aria-hidden="true" className="ml-2" size={18} />
                 </a>
               </div>
             ))}
@@ -179,7 +179,7 @@ export function Sponsors() {
                   href={`mailto:${externalVP.email}@wisc.edu`}
                   className="text-gray-600 hover:text-[#c5050c] transition-colors inline-flex items-center"
                 >
-                  <Mail size={18} className="mr-2" />
+                  <Mail aria-hidden="true" size={18} className="mr-2" />
                   {externalVP.email}@wisc.edu
                 </a>
               </div>
@@ -189,7 +189,7 @@ export function Sponsors() {
                 to="/contact"
                 className="inline-flex items-center justify-center px-8 py-3 bg-[#c5050c] text-white rounded-lg hover:bg-[#a00409] transition-colors font-semibold shadow-md hover:shadow-lg"
               >
-                <Mail className="mr-2" size={20} />
+                <Mail aria-hidden="true" className="mr-2" size={20} />
                 Contact Us
               </Link>
             </div>
@@ -214,14 +214,14 @@ export function Sponsors() {
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center px-8 py-3 bg-white text-[#c5050c] rounded-lg hover:bg-gray-100 transition-colors font-semibold shadow-lg hover:shadow-xl"
             >
-              <FileText className="mr-2" size={20} />
+              <FileText aria-hidden="true" className="mr-2" size={20} />
               Company Database Form
             </a>
             <Link
               to="/contact"
               className="inline-flex items-center justify-center px-8 py-3 bg-transparent border-2 border-white text-white rounded-lg hover:bg-white/10 transition-colors font-semibold"
             >
-              <Mail className="mr-2" size={20} />
+              <Mail aria-hidden="true" className="mr-2" size={20} />
               Contact Us
             </Link>
           </div>
